@@ -1,9 +1,15 @@
-function createElement(parentEle, props, childEle) {
+function createElement(parentEle, props, ...childEles) {
     if(typeof parentEle === 'function') {
         return parentEle();
     } else {
         let parentElement = document.createElement(parentEle);
-        parentElement.innerHTML = childEle;
+        childEles.forEach(child => {
+            if(typeof child === 'string') {
+                parentElement.innerHTML += child;
+            } else if(typeof child === 'object') {
+                parentElement.appendChild(child);
+            }
+        });
         return parentElement;
     }
 }
