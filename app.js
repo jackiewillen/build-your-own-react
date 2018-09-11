@@ -1,8 +1,6 @@
-class Hello {
-    render() {
-        return React.createElement('div', null, `版本四，类组件的实现`);
-    }
-}
+const Hello = ({name}) => {
+return React.createElement('div', null, `这是 ${name}`);
+};
 
-const helloWorld = React.createElement(Hello, null, null);
+const helloWorld = React.createElement(Hello, {name: '版本五'}, null);
 ReactDOM.render(helloWorld, document.getElementById('root'));

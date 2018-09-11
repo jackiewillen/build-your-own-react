@@ -3,7 +3,7 @@ function createElement(parentEle, props, ...childEles) {
         let component = new parentEle();
         return component.render();
     }else if (typeof parentEle === 'function'){
-        return parentEle();
+        return parentEle(props);
     }else {
         let parentElement = document.createElement(parentEle);
         childEles.forEach(child => {
