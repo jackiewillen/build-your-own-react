@@ -1,7 +1,10 @@
 function createElement(parentEle, props, ...childEles) {
-    if(typeof parentEle === 'function') {
+    if (typeof parentEle === 'function' && /^\s*class\s+/.test(parentEle.toString())) {
+        let component = new parentEle();
+        return component.render();
+    }else if (typeof parentEle === 'function'){
         return parentEle();
-    } else {
+    }else {
         let parentElement = document.createElement(parentEle);
         childEles.forEach(child => {
             if(typeof child === 'string') {
