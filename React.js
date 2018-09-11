@@ -1,7 +1,11 @@
 function createElement(parentEle, props, childEle) {
-    let parentElement = document.createElement(parentEle);
-    parentElement.innerHTML = childEle;
-    return parentElement;
+    if(typeof parentEle === 'function') {
+        return parentEle();
+    } else {
+        let parentElement = document.createElement(parentEle);
+        parentElement.innerHTML = childEle;
+        return parentElement;
+    }
 }
 function render(insertEle, rootEle) {
     rootEle.appendChild(insertEle);
