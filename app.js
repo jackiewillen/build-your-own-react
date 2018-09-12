@@ -1,6 +1,12 @@
-const Hello = ({name}) => {
-return React.createElement('div', null, `这是 ${name}`);
-};
+class Hello extends React.Component {
 
-const helloWorld = React.createElement(Hello, {name: '版本五'}, null);
-ReactDOM.render(helloWorld, document.getElementById('root'));
+    constructor(props) {
+      super(props);
+    }
+  
+    render() {
+      return React.createElement('div', null, `Hello ${this.props.name}`);
+    }
+  }
+  const helloWorld = React.createElement(Hello, {name: '版本六'}, null);
+  ReactDOM.render(helloWorld, document.getElementById('root'));

@@ -1,10 +1,18 @@
+class Component {
+    constructor(props) {
+        this.props = props;
+    }
+}
 function createElement(parentEle, props, ...childEles) {
     if (typeof parentEle === 'function' && /^\s*class\s+/.test(parentEle.toString())) {
-        let component = new parentEle();
+        // 当为类组件时
+        let component = new parentEle(props);
         return component.render();
-    }else if (typeof parentEle === 'function'){
+    }else if (typeof parentEle === 'function') {
+        // 当为函数组件时
         return parentEle(props);
     }else {
+        // 当为html标签组件时
         let parentElement = document.createElement(parentEle);
         childEles.forEach(child => {
             if(typeof child === 'string') {
@@ -20,7 +28,8 @@ function render(insertEle, rootEle) {
     rootEle.appendChild(insertEle);
 }
 React = {
-    createElement
+    createElement,
+    Component
 }
 ReactDOM = {
     render

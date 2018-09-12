@@ -1,8 +1,14 @@
-（1）app.js实现React 函数组件带参数属性的实现：
+（1）app.js实现React 类组件的属性的传递：
 
-const Hello = ({name}) => {
-  return React.createElement('div', null, `Hello ${name}`);
-};
+class Hello extends React.Component {
 
-const helloWorld = React.createElement(Hello, {name: 'Ofir'}, null);
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return React.createElement('div', null, `Hello ${this.props.name}`);
+  }
+}
+const helloWorld = React.createElement(Hello, {name: '版本六'}, null);
 ReactDOM.render(helloWorld, document.getElementById('root'));
