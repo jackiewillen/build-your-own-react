@@ -1,12 +1,12 @@
-class Hello extends React.Component {
+class MyButton extends React.Component {
 
     constructor(props) {
       super(props);
     }
   
     render() {
-      return React.createElement('div', null, `Hello ${this.props.name}`);
+      return React.createElement('button', {onclick: this.props.onClick}, `Click me`);
     }
-  }
-  const helloWorld = React.createElement(Hello, {name: '版本六'}, null);
-  ReactDOM.render(helloWorld, document.getElementById('root'));
+}
+  const myBtn = React.createElement(MyButton, {onClick: () => alert('点击事件触发')}, null);
+  ReactDOM.render(myBtn, document.getElementById('root'));
