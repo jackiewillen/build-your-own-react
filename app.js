@@ -1,6 +1,3 @@
 
-const ReactEle = React.createElement('div', null, [
-    React.createElement('span',null, '你好！'),
-    React.createElement('span',null, '啊...')
-]);
+const ReactEle = React.createElement('input', {onFocus: function(){console.log('我被聚焦了')}});
 ReactDOM.render(ReactEle, document.getElementById('root'));

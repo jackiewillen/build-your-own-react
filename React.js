@@ -23,19 +23,12 @@
             // （2）、当为函数组件时
             return parentEle(props);
         } else {
-            console.log(childEles);
             // （3）、当为html标签组件时
             let parentElement = document.createElement(parentEle);
             Object.keys(props || {}).forEach(key => {
-                switch(key) {
-                    case 'onclick':
-                        parentElement.addEventListener('click', props[key]);
-                        break;
-                    case 'onClick':
-                        parentElement.addEventListener('click', props[key]);
-                        break;
-                    default:
-                        break;
+                if(/^on.*$/.test(key)) {
+                    eventName = key.slice(2).toLowerCase();
+                    parentElement.addEventListener(eventName, props[key]);
                 }
             });
             childEles.forEach(child => {

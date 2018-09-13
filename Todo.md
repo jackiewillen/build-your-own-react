@@ -1,7 +1,4 @@
-（1）实现React.js支持数组子元素的传入：
+（1）实现React.js对于不同种类事件的支持：
 
-const ReactEle = React.createElement('div', null, [
-    React.createElement('span',null, '你好！'),
-    React.createElement('span',null, '啊...')
-]);
+const ReactEle = React.createElement('input', {onFocus: function(){console.log('我被聚焦了')}});
 ReactDOM.render(ReactEle, document.getElementById('root'));
