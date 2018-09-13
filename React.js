@@ -29,6 +29,10 @@
                 if(/^on.*$/.test(key)) {
                     eventName = key.slice(2).toLowerCase();
                     parentElement.addEventListener(eventName, props[key]);
+                } else if(key ==='className') {
+                    parentElement.setAttribute('class',props[key]);
+                } else {
+
                 }
             });
             childEles.forEach(child => {
