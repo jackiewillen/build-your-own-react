@@ -1,5 +1,6 @@
-function Title() {
-    return React.createElement('div',null,'我是函数组件');
-}
-let Title = React.createElement(Title,null,null);
-ReactDOM.render(Title, document.getElementById('root'));
+
+const ReactEle = React.createElement('div', null, [
+    React.createElement('span',null, '你好！'),
+    React.createElement('span',null, '啊...')
+]);
+ReactDOM.render(ReactEle, document.getElementById('root'));

@@ -1,7 +1,7 @@
-（1）同时实现类组件的动态渲染和函数组件以及HTML标签组件的渲染：
+（1）实现React.js支持数组子元素的传入：
 
-function Title() {
-    return React.createElement('div',null,'我是函数组件');
-}
-let myCounter = React.createElement(Title,null,null);
-ReactDOM.render(myCounter, document.getElementById('root'));
+const ReactEle = React.createElement('div', null, [
+    React.createElement('span',null, '你好！'),
+    React.createElement('span',null, '啊...')
+]);
+ReactDOM.render(ReactEle, document.getElementById('root'));
