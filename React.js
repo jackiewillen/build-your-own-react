@@ -15,15 +15,15 @@
     // React.createElement
     function createElement(parentEle, props, ...childEles) {
         if (typeof parentEle === 'function' && /^\s*class\s+/.test(parentEle.toString())) {
-            // （1）、当为类组件时
+            // （1）当为类组件时
             let component = new parentEle(props);
             component.type = REACT_CLASS;
             return component;
         } else if (typeof parentEle === 'function') {
-            // （2）、当为函数组件时
+            // （2）当为函数组件时
             return parentEle(props);
         } else {
-            // （3）、当为html标签组件时
+            // （3）当为html标签组件时
             let parentElement = document.createElement(parentEle);
             Object.keys(props || {}).forEach(key => {
                 if(/^on.*$/.test(key)) {
@@ -35,6 +35,9 @@
                     Object.keys(props[key]).forEach(attr => 
                         parentElement.style[attr] = props[key][attr]
                     );
+                } else {
+                    // 添加其他如href等属性直接添加进来
+                    parentElement.setAttribute(key, props[key]);
                 }
             });
             childEles.forEach(child => {
