@@ -49,6 +49,8 @@
                 } else if (Array.isArray(child)) {
                     // (2)当子元素是一个数组中包含多个Node节点时
                     child.forEach((childItem) => parentElement.appendChild(childItem));
+                } else if(typeof child === 'object' && child.type === 'REACT_CLASS') {
+                    parentElement.appendChild(child.render());
                 } else if(typeof child === 'object') {
                     // (3)当子元素是一个Node节点是直接附加到父节点
                     parentElement.appendChild(child);

@@ -1,23 +1,16 @@
-（1）实现React.js对于属性ref的支持：
+（1）第十四版之后是对React.js中还存在的缺陷作一个修改
+缺陷一：子组件是类组件的支持
 
-function SearchForm({ onSearch }) {
-    let input;
-    return (
-        <div>
-            <input
-                ref={node => input = node}
-                type="text"
-            />
-            <button
-                onClick={() => onSearch(input.value)}
-                type="button"
-            >
-                Search
-            </button>
-        </div>
-    );
+class TitleComponent extends React.component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return React.createElement('span',null,'这是一个Title标签');
+    }
 }
-ReactDOM.render(SearchForm, document.getElementById('root'));
+let myComponent = React.createElement('div',null,'我是最外层的div',React.createElement(TitleComponent,null,null));
+ReactDOM.render(myComponent, document.getElementById('root'));
 
 
 具体可以参考
