@@ -1,5 +1,24 @@
-（1）实现React.js对于HTML标签的属性如style设计的支持：
+（1）实现React.js对于属性ref的支持：
+
+function SearchForm({ onSearch }) {
+    let input;
+    return (
+        <div>
+            <input
+                ref={node => input = node}
+                type="text"
+            />
+            <button
+                onClick={() => onSearch(input.value)}
+                type="button"
+            >
+                Search
+            </button>
+        </div>
+    );
+}
+ReactDOM.render(SearchForm, document.getElementById('root'));
 
 
-const ReactEle = React.createElement('div', {className: 'common-class', style: {marginTop: '300px'}},'我是一个有样式的span标签');
-ReactDOM.render(ReactEle, document.getElementById('root'));
+具体可以参考
+https://www.robinwieruch.de/react-ref-attribute-dom-node/

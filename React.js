@@ -35,6 +35,8 @@
                     Object.keys(props[key]).forEach(attr => 
                         parentElement.style[attr] = props[key][attr]
                     );
+                } else if (key === 'ref'){
+                    props[key](parentElement);
                 } else {
                     // 添加其他如href等属性直接添加进来
                     parentElement.setAttribute(key, props[key]);
