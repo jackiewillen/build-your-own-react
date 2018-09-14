@@ -30,9 +30,11 @@
                     eventName = key.slice(2).toLowerCase();
                     parentElement.addEventListener(eventName, props[key]);
                 } else if(key ==='className') {
-                    parentElement.setAttribute('class',props[key]);
-                } else {
-
+                    parentElement.setAttribute('class', props[key]);
+                } else if(key ==='style') {
+                    Object.keys(props[key]).forEach(attr => 
+                        parentElement.style[attr] = props[key][attr]
+                    );
                 }
             });
             childEles.forEach(child => {
