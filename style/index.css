@@ -1,0 +1,143 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+h4,h1,h2{
+  margin: 0px;
+}
+
+h2{
+  font-size: small;
+}
+
+input{
+  font-size: small;
+  background-color: #fefefe;
+  border: 1px solid #cacaca;
+  margin-left: 4px;
+  height: 15px;
+  width: 30px;
+}
+
+.game,.board{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h4.title{
+  justify-content: flex-start;
+  margin-left: 8px;
+  font-size: 50px;
+  font-weight: 800;
+  font-family: sans-serif;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+}
+.properties{
+  display: flex;
+  flex-direction: row;
+  margin-right: 25px;
+  max-width: 250px;
+}
+
+.flags-information{
+  align-items: flex-end;
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8px;
+  padding-bottom: 9px;
+}
+
+.boardHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.game-settings{
+  background: #FF7C80;
+  align-items: center;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  max-width: 310px;
+  height: 40px;
+  border: 1px solid #eeeeee ;
+  border-radius: 10px;
+}
+
+.board-row,.property  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.property{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+.start-button {
+  background-color: #f1c99f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.square {
+  background: #E3E3E3;
+  border: 0px solid #DCD7AB;
+  border-radius: 6px;
+  float: left;
+  font-size: 25px;
+  font-weight: bold;
+  height: 35px;
+  margin-top : 1px;
+  margin-right : 1px;
+  padding: 0;
+  text-align: center;
+  width: 35px;
+}
+
+#SweeperHeader{
+  color: #17AD90;
+  padding-bottom: 7px;
+  padding-left: 4px;
+  font-size: 25px ;
+  align-items: flex-end ;
+}
+
+button:focus{
+  outline:0;
+}
+
+.hidden {
+  display:none;
+}
+
+.author-credit {
+  margin-top: 10px;
+}

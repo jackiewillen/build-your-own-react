@@ -1,6 +1,5 @@
-（1）第十四版之后是对React.js中还存在的缺陷作一个修改
-缺陷一：子组件是类组件的支持。 done 
-缺陷二：修复React.js中setState使用this.state = state;导致旧状态丢失的问题。 done
+（1）第十五版主要是用于show off,我们把别人写好的一个扫雷游戏前端代码拷贝过来，React.js就用我们刚刚写好的React.js框架，运行成功了，怎么样，是不是对React.js的运行原理有些了解了。到这为止，React中的代码应该重构一下，但是为了更加便于阅读，所以就不改动了，另外，老夫也改不动了。先就到这吧。
+
 class TitleComponent extends React.Component {
     setName() {
         // 设置年龄后姓名丢失
