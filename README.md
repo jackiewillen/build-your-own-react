@@ -1,10 +1,10 @@
 <h1>手把手带你用85行代码实现一个React.js（详细讲解）</h1>
 <h3>作者：殷荣桧<br></h3>
 　　啥也不说，先来看看用我们的React.js直接替换别人写好的扫雷项目中的React.js，看看效果怎么样？
-<center><img src="http://thyrsi.com/t6/375/1537770280x-1566661319.gif" width="300px"/></center>
+<center><img src="https://user-gold-cdn.xitu.io/2018/9/24/1660c40008e369d0?imageslim" width="300px"/></center>
 　　85行代码分18次commit，如下图所示。每个commit实现一个小目标,每个小目标实现一个相对完整的功能。最后由这些功能组合成自己的React.js框架。墙裂推荐你结合每一个commit和这篇文章一起看，再动手写一写。如果这样你还是没有看懂，到上海腾讯来，我真的手把手（气氛有点不对啊）带你写。
 
-<center><img src="http://thyrsi.com/t6/375/1537800043x-1404793579.png" width="600px"/></center>
+<center><img src="https://user-gold-cdn.xitu.io/2018/9/24/1660c40009c8f041?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" width="600px"/></center>
 
 1.第一个commit: initial commit
 	是在github上建立仓库时自动生成的。然后在README.md中说明了一下仓库的用途。用于实现一个基础的React.js框架
